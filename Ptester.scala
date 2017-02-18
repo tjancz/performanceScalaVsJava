@@ -10,7 +10,7 @@ object Ptester {
     val arraySizeValues = List[Int] (200, 2000, 20000, 200000, 2000000, 20000000)
     arraySizeValues.foreach( size => {
       val startTime =  java.lang.System.currentTimeMillis()
-      val array = Seq.fill(size)(Random.nextInt)
+      val array = Array.fill(size)(Random.nextInt)
       array.foreach( item => if(item == 2) print("|") )
       val endTime = java.lang.System.currentTimeMillis()
       println(s"Array size: $size time for simple count operation: ${endTime - startTime} in ms")
